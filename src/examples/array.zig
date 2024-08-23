@@ -1,6 +1,6 @@
 const std = @import("std");
 
-pub fn print() void {
+pub fn main() !void {
     std.debug.print("Listing elements from: a\n", .{});
     for (a) |elem| {
         std.debug.print("elem: {}\n", .{elem});

@@ -1,10 +1,9 @@
 const std = @import("std");
 const user = @import("models/user.zig");
-const array = @import("examples/array.zig");
 const User = user.User;
 const MAX_POWER = user.MAX_POWER;
 
-pub fn main() void {
+pub fn main() !void {
     const goku = User{
         .power = 9001,
         .name = "Goku",
@@ -14,6 +13,4 @@ pub fn main() void {
 
     User.diagnose(goku);
     goku.diagnose();
-
-    array.print();
 }
