@@ -1,12 +1,14 @@
 const std = @import("std");
-const User = @import("models/user.zig").User;
+const user = @import("models/user.zig");
+const User = user.User;
+const MAX_POWER = user.MAX_POWER;
 const expect = std.testing.expect;
 
 pub fn main() void {
-    const user = User{
+    const goku = User{
         .power = 9001,
         .name = "Goku",
     };
 
-    std.debug.print("{s}'s power is {d}.", .{ user.name, user.power });
+    std.debug.print("{s}'s power is {d}.", .{ goku.name, goku.power });
 }
